@@ -1,9 +1,9 @@
 name: CI for Cypress Tests
 
 on:
-  pull_request:
+  push:
     branches:
-      - develop
+      - main
 
 jobs:
   cypress-tests:
@@ -18,4 +18,4 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run Cypress tests
-        run: npm run cypress:run
+        run: npm run test
